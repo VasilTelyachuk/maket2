@@ -1,16 +1,16 @@
 // Utils
-@import './utils/vars';
-@import './utils/mixins';
+@import 'utils/vars';
+@import 'utils/mixins';
 
 // Base Styles
-@import './vendor/normalize.css';
-@import './base/fonts';
+@import 'vendor/normalize.css';
+@import 'base/fonts';
 
 // Components
-@import './components/header';
-@import './components/section-consultations';
-@import './components/footer';
+@import 'components/header';
+@import 'components/section-consultations';
+@import 'components/footer';
 
 // Main page layout
-@import './layout/common';
+@import 'layout/common';
 
