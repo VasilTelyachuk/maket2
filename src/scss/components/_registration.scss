@@ -141,5 +141,6 @@
 .registration-form__link-entrance {
   @include typography($primary-font, 18px, 25px, 600, $section-link-color);
   text-decoration: none;
+  margin: 0 auto;
 }
 
