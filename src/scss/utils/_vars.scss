@@ -9,12 +9,23 @@ $pages-number-hover-color: #2d5ca6;
 $nav-form-search-color: #eef5ff;
 $nav-bg-color: radial-gradient(273.5% 1878.8% at 53.2% 50%, #1e4286 0%, #0e327e 100%);
 $header-bg-color: radial-gradient(273.5% 1878.8% at 53.2% 50%, #2754a9 0%, #133f9e 100%);
+$section-bg-color: #f5f7fa;
+$pagest-bg-color: #e5e5e5;
+$decor-after-title: #c2c5cb;
+$decor-title: #c2c5cb;
+$decor-add-info: #c4c4c4;
 $footer-bg-color: #f5f7fa;
 $nav-btn-color: #ffffff;
-$section-text-color: #004BC1;
-$section-link-hover: #2D5CA6;
-$section-border-bottom-color: #C2C5CB;
-$section-link-color: #2D5CA6;
+$border-form-no-active: #004bc1;
+$section-text-color: #004bc1;
+$section-link-hover: #2d5ca6;
+$section-border-bottom-color: #c2c5cb;
+$section-link-color: #2d5ca6;
+$border-input-color: #6d727c;
+$select-btn-color: #1d1d1b;
 
 // FONTS
-$primary-font: 'Open Sans',sans-serif;
+$primary-font: 'Open Sans', sans-serif;
+
+// length
+$max-width: 1221px;

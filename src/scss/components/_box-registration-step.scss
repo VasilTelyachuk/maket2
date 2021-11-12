@@ -1,0 +1,52 @@
+@import 'layout/common.scss';
+.registration-step-box {
+  margin-bottom: 30px;
+  @media (min-width: 905px) {
+    margin-bottom: 40px;
+  }
+}
+.registration-step-box__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  @media (min-width: 905px) {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+}
+.registration-step-box__step {
+  @include typography($primary-font, 12px, 16px, 400, $text-third-color);
+  @media (max-width: 904px) {
+    &:not(:nth-last-child(1)) {
+      margin-bottom: 10px;
+    }
+  }
+  @media (min-width: 905px) {
+    margin: 0 20px;
+    @include typography($primary-font, 15px, 20px, 400, $text-third-color);
+  }
+}
+.active-step {
+  @include typography($primary-font, 15px, 20px, 400, $text-fifth-color);
+  @media (min-width: 905px) {
+    @include typography($primary-font, 18px, 25px, 400, $text-fifth-color);
+  }
+}
+.registration-step-box__title {
+  margin: 0px 0px 10px 0px;
+  @include typography($primary-font, 25px, 34px, 700, $text-fourth-color);
+  text-align: center;
+  @media (min-width: 905px) {
+    @include typography($primary-font, 40px, 54px, 700, $text-fourth-color);
+  }
+}
+.registration-step-box__info {
+  @include typography($primary-font, 12px, 16px, 400, $text-third-color);
+  display: block;
+  text-align: center;
+  @media (min-width: 905px) {
+    @include typography($primary-font, 15px, 20px, 400, $text-third-color);
+  }
+}

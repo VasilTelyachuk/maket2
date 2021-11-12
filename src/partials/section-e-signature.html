@@ -1,0 +1,38 @@
+<main>
+    <section class="section-e-signature">
+        <div class="container">
+            @include('section__info-warning.html')
+            <div class="registration-step-box">
+                <div class="registration-step-box__wrap">
+                    <span class="registration-step-box__step">Крок 1: реєстрація</span>
+                    <span class="registration-step-box__step active-step">Крок 2: Зчитування ЕП</span>
+                </div>
+                <h2 class="registration-step-box__title">Електронний підпис</h2>
+                <span class="registration-step-box__info">Сайт не зберігає ЕП і використовує його лише для разової
+                    ідентифікації
+                    особи</span>
+            </div>
+            <form action="#" class="e-signature">
+                <div class="e-signature__select-wrap">
+                    <select class="e-signature__select" name="e-signature" id="e-signature" required>
+                        <option value="1">ЦСК</option>
+                    </select>
+                    <svg class="e-signature__select-icon" width="20" height="10.98">
+                        <use href="img/sprite.svg#btn-select"></use>
+                    </svg>
+                </div>
+                <div class="e-signature__wrap-input">
+                    <input class="e-signature__input" type="text" name="key" id="key" placeholder="Приватний ключ"
+                        required>
+                    <button type="button" class="e-signature__input-btn">Завантажити ключ</button>
+                </div>
+                <div class="e-signature__wrap-input">
+                    <input class="e-signature__input" type="password" name="password" id="password"
+                        placeholder="Пароль захисту" required>
+                    <button type="button" class="e-signature__input-btn">Зчитати</button>
+                </div>
+                <button type="submit" class="e-signature__btn">Підтвердити</button>
+            </form>
+        </div>
+    </section>
+</main>

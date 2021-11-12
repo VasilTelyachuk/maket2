@@ -1,0 +1,197 @@
+.radio {
+  margin-bottom: 30px;
+}
+.radio__list {
+  @include typography($primary-font, 18px, 25px, 400, $pages-number-hover-color);
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.radio__title {
+  @include typography($primary-font, 15px, 20px, 600, $text-fifth-color);
+  margin: 0px 0px 15px 0px;
+  @media (min-width: 905px) {
+    @include typography($primary-font, 18px, 25px, 600, $text-fifth-color);
+    margin: 0px 0px 20px 0px;
+  }
+}
+.radio__item {
+  display: flex;
+  align-items: center;
+  &:not(:nth-last-of-type(1)) {
+    margin-bottom: 20px;
+  }
+}
+.radio__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  &:checked + label {
+    &::before {
+      border: 1px solid $text-primary-color;
+      background-image: url(../img/sprite.svg#radio);
+    }
+  }
+  &:not(:checked) + label:hover {
+    &::before {
+      background-color: rgba($pages-number-hover-color, 0.2);
+    }
+  }
+  &:focus + label {
+    &::before {
+      box-shadow: 0 0 0 1px rgba($pages-number-hover-color, 1);
+      border: 1px solid $text-primary-color;
+    }
+  }
+}
+
+.radio__label {
+  display: inline-flex;
+  align-items: center;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba($border-form-no-active, 0.2);
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 33%;
+  }
+}
+.checkbox {
+  margin-bottom: 30px;
+}
+.checkbox__title {
+  @include typography($primary-font, 15px, 20px, 600, $text-fifth-color);
+  margin: 0px 0px 10px 0px;
+  @media (min-width: 905px) {
+    @include typography($primary-font, 18px, 25px, 600, $text-fifth-color);
+  }
+}
+.checkbox__text {
+  @include typography($primary-font, 12px, 16px, 400, $text-third-color);
+  display: inline-block;
+  margin: 0px 0px 15px 0px;
+  @media (min-width: 905px) {
+    @include typography($primary-font, 15px, 20px, 400, $text-third-color);
+    margin: 0px 0px 20px 0px;
+  }
+}
+.checkbox__list {
+  @extend .radio__list;
+}
+.checkbox__item {
+  &:not(:nth-last-of-type(1)) {
+    margin-bottom: 15px;
+  }
+}
+
+.checkbox__label {
+  @extend .radio__label;
+  &::before {
+    border-radius: 4px;
+    background-size: 66%;
+  }
+}
+.checkbox__input {
+  @extend .radio__input;
+  &:checked + label {
+    &::before {
+      background-image: url(../img/sprite.svg#check);
+    }
+  }
+}
+.rang__title {
+  @extend .radio__title;
+}
+
+.rang__label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $section-bg-color;
+  transition-property: background-color, color;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+  border-radius: 20px;
+}
+.rang__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  &:checked + label {
+    color: $section-bg-color;
+    background-color: $pages-number-hover-color;
+  }
+  &:not(:checked) + label:hover {
+    background-color: rgba($pages-number-hover-color, 0.2);
+  }
+  &:focus + label {
+    outline: solid 1px $pages-number-hover-color;
+  }
+}
+.rang__list {
+  @extend .radio__list;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -7px -7px -7px -7px;
+}
+.rang__item {
+  margin: 7px;
+  // &:not(:nth-last-of-type(1)) {
+  //   margin-right: 15px;
+  // }
+}
+.rang {
+  margin-bottom: 30px;
+}
+.text_area__title {
+  @extend .checkbox__title;
+}
+.text-area__text {
+  @extend .checkbox__text;
+}
+.text-area__form {
+  @include typography($primary-font, 12px, 16px, 400, $text-third-color);
+  display: block;
+  width: 100%;
+  height: auto;
+  resize: none;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid $text-third-color;
+}
+.text-area {
+  margin-bottom: 30px;
+}
+.answer-form__btn {
+  width: 300px;
+  height: 50px;
+  @include typography($primary-font, 18px, 25px, 600, $text-secondary-color);
+  background-color: $text-primary-color;
+  cursor: pointer;
+  border: none;
+  padding: 0px;
+  &:active {
+    background-color: rgba($text-primary-color, 0.9);
+  }
+  @media (min-width: 905px) {
+    @include typography($primary-font, 20px, 27px, 600, $text-secondary-color);
+    width: 250px;
+  }
+}
+.answer-form {
+  margin-bottom: 50px;
+}
+body {
+  counter-reset: section;
+}
+
+h4::before {
+  counter-increment: section;
+  content: '' counter(section) '. ';
+}

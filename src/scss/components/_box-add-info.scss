@@ -1,0 +1,85 @@
+.add-info {
+  padding: 0px 10px;
+  background-color: $section-bg-color;
+  margin-bottom: 30px;
+  @media (min-width: 905px) {
+    background-color: rgba($text-primary-color, 0);
+    margin-bottom: 0px;
+    padding: 0px;
+    min-width: min-content;
+    width: 23.12%;
+  }
+  // @media (min-width: 1221px) {
+  // }
+}
+.add-info__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $decor-add-info;
+  padding: 15px 0px;
+  margin-bottom: 20px;
+  @media (min-width: 905px) {
+    display: none;
+  }
+}
+
+.add-info__title {
+  @include typography($primary-font, 15px, 20px, 600, $text-fifth-color);
+}
+.add-info__svg {
+  cursor: pointer;
+}
+.add-info__title-item {
+  @include typography($primary-font, 15px, 20px, 700, $text-fourth-color);
+  padding: 0px;
+  margin: 0px 0px 10px 0px;
+  @media (min-width: 905px) {
+    @include typography($primary-font, 24px, 33px, 600, $text-fifth-color);
+    &:nth-last-of-type(1) {
+      margin-bottom: 20px;
+    }
+  }
+}
+.add-info__text {
+  @include typography($primary-font, 12px, 16px, 400, $text-fifth-color);
+  margin-bottom: 20px;
+  display: inline-block;
+  span {
+    font-weight: 600;
+  }
+  @media (min-width: 905px) {
+    @include typography($primary-font, 15px, 20px, 400, $text-fifth-color);
+    margin-bottom: 40px;
+  }
+}
+.add-info__link {
+  text-decoration: none;
+  @include typography($primary-font, 12px, 16px, 700, $text-primary-color);
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  &:hover {
+    text-decoration: underline;
+  }
+  @media (min-width: 905px) {
+    @include typography($primary-font, 18px, 25px, 700, $text-primary-color);
+  }
+}
+.add-info__btn {
+  width: 270px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba($nav-form-search-color, 0);
+  border: 2px solid $text-fifth-color;
+  @include typography($primary-font, 15px, 20px, 600, $text-fifth-color);
+  margin-bottom: 30px;
+  cursor: pointer;
+  &:focus {
+    background-color: rgba($text-primary-color, 0.1);
+  }
+  @media (min-width: 905px) {
+    width: 250px;
+  }
+}

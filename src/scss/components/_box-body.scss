@@ -1,0 +1,50 @@
+.wrap-content {
+  @media (min-width: 905px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.body__title {
+  @include typography($primary-font, 20px, 27px, 700, $text-fourth-color);
+  margin: 0px 0px 10px 0px;
+  @media (min-width: 905px) {
+    @include typography($primary-font, 24px, 33px, 700, $text-fourth-color);
+    margin: 0px 0px 20px 0px;
+  }
+}
+.body__text {
+  @include typography($primary-font, 15px, 20px, 400, $text-fifth-color);
+  margin: 0px;
+  &:not(:nth-last-child(1)) {
+    margin-bottom: 15px;
+    @media (min-width: 905px) {
+      @include typography($primary-font, 18px, 25px, 400, $text-fifth-color);
+      margin-bottom: 20px;
+    }
+  }
+  &:nth-last-child(1) {
+    margin-bottom: 30px;
+  }
+}
+.body__text--grey {
+  @include typography($primary-font, 15px, 20px, 400, $text-third-color);
+  margin-bottom: 0px 0px 30px 0px;
+  &:not(:nth-last-child(1)) {
+    margin-bottom: 30px;
+    @media (min-width: 905px) {
+      @include typography($primary-font, 18px, 25px, 400, $text-third-color);
+      margin-bottom: 40px;
+    }
+  }
+}
+.body {
+  @media (min-width: 905px) {
+    width: 74%;
+    padding-right: 20px;
+  }
+  @media (min-width: 1221px) {
+    padding-right: 0px;
+  }
+}
