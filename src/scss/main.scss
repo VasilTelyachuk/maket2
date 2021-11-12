@@ -1,6 +1,7 @@
 // Utils
 @import 'utils/vars';
 @import 'utils/mixins';
+<<<<<<< HEAD
 // Base Styles
 @import 'vendor/normalize.css';
 @import 'base/fonts';
@@ -17,6 +18,20 @@
 @import 'components/registration';
 @import 'components/box-registration-step';
 // Main page layout
+=======
+
+// Base Styles
+@import 'vendor/normalize.css';
+@import 'base/fonts';
+
+// Components
+@import 'components/header';
+@import 'components/section-consultations';
+@import 'components/footer';
+
+// Main page layout
+@import 'layout/common';
+>>>>>>> e44ddcdf41671d75568dc7e03af33b7a42119483
 
 // Main page layout
 @import 'layout/common.scss';
