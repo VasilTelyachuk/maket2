@@ -138,10 +138,8 @@
   margin-bottom: 30px;
 }
 
-.registration-form__btn-entrance {
-  border: none;
-  background-color: transparent;
-  padding: 0px;
+.registration-form__link-entrance {
   @include typography($primary-font, 18px, 25px, 600, $section-link-color);
-  cursor: pointer;
+  text-decoration: none;
 }
+
